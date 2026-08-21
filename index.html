@@ -282,9 +282,6 @@
                     <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">
                       ពាក្យសម្ងាត់ (Password)
                     </label>
-                    <span class="text-[10.5px] text-blue-600 dark:text-blue-400 font-mono">
-                      (Admin: 1212)
-                    </span>
                   </div>
                   <input type="password" id="login-password" required placeholder="បញ្ចូលពាក្យសម្ងាត់..."
                     class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-600 focus:outline-none">
@@ -2391,14 +2388,14 @@ function doPost(e) {
       const pass = document.getElementById('login-password').value.trim();
       const errElem = document.getElementById('login-error-msg');
 
-      // 1. ADMIN / DIRECTOR LOGIN VALIDATION (limsorn / 1212)
+      // 1. ADMIN / DIRECTOR LOGIN VALIDATION (limsorn)
       if (id === 'limsorn' || id === 'admin' || id === 'limsorn9@gmail.com' || id === 'director') {
         if (pass !== '1212') {
           if (errElem) {
-            errElem.innerText = '❌ ពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ! (សម្រាប់គណនី Admin / limsorn ពាក្យសម្ងាត់គឺ 1212)';
+            errElem.innerText = '❌ ឈ្មោះគណនី ឬពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ!';
             errElem.classList.remove('hidden');
           } else {
-            alert('❌ ពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ! (ពាក្យសម្ងាត់ Admin គឺ 1212)');
+            alert('❌ ឈ្មោះគណនី ឬពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ!');
           }
           return;
         }
@@ -2431,9 +2428,9 @@ function doPost(e) {
     }
 
     function quickRoleLogin(role) {
-      // Security Check: If switching to Admin/Director, require password 1212
+      // Security Check: If switching to Admin/Director, require password
       if (role === 'director') {
-        const pass = prompt('🔒 គណនី Admin / នាយកសាលា (limsorn) តម្រូវឱ្យបញ្ចូលពាក្យសម្ងាត់ (Password: 1212)៖');
+        const pass = prompt('🔒 សូមបញ្ចូលពាក្យសម្ងាត់ Admin / នាយកសាលា (limsorn)៖');
         if (pass !== '1212') {
           alert('❌ ពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ! មិនអាចចូលប្រើប្រាស់គណនី Admin បានឡើយ។');
           return;
