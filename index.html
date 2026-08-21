@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ប្រព័ន្ធគ្រប់គ្រងសាលាបឋមសិក្សារដ្ឋ - State Primary School Management System (MoEYS)</title>
+  <title>ប្រព័ន្ធគ្រប់គ្រងសាលាបឋមសិក្សាភ្នំពុំ - Phnom Pom Primary School</title>
   <meta name="description"
-    content="ប្រព័ន្ធគ្រប់គ្រងសាលារៀនបឋមសិក្សារដ្ឋ ស្របតាមស្តង់ដារក្រសួងអប់រំ យុវជន និងកីឡា (MoEYS)">
+    content="ប្រព័ន្ធគ្រប់គ្រងសាលាបឋមសិក្សាភ្នំពុំ ឃុំបារាំងធ្លាក់ ស្រុកភ្នំព្រឹក ខេត្តបាត់ដំបង">
 
   <!-- Google Fonts: Moul, Battambang, Kantumruy Pro, Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -226,7 +226,7 @@
                 សាលាបឋមសិក្សាភ្នំពុំ
               </h2>
               <p class="text-xs text-blue-200">
-                ប្រព័ន្ធគ្រប់គ្រងរដ្ឋបាល ការសិក្សា និងទិន្នន័យសាលាបឋមសិក្សារដ្ឋ (MoEYS)
+                ប្រព័ន្ធគ្រប់គ្រងរដ្ឋបាល ការសិក្សា និងទិន្នន័យ សាលាបឋមសិក្សាភ្នំពុំ
               </p>
             </div>
           </div>
@@ -273,7 +273,7 @@
                   <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                     អ៊ីមែល ឬ អត្តលេខសម្គាល់ (Username / Code)
                   </label>
-                  <input type="text" id="login-identifier" required placeholder="ឧ. limsorn9@gmail.com ឬ STU-2024-001"
+                  <input type="text" id="login-identifier" required placeholder="ឧ. limsorn ឬ STU-2024-001"
                     class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-600 focus:outline-none font-medium">
                 </div>
 
@@ -282,12 +282,11 @@
                     <label class="block text-xs font-bold text-slate-700 dark:text-slate-300">
                       ពាក្យសម្ងាត់ (Password)
                     </label>
-                    <button type="button" onclick="showPasswordRecoveryModal()"
-                      class="text-[11px] text-blue-600 hover:underline">
-                      ភ្លេចពាក្យសម្ងាត់?
-                    </button>
+                    <span class="text-[10.5px] text-blue-600 dark:text-blue-400 font-mono">
+                      (Admin: 1212)
+                    </span>
                   </div>
-                  <input type="password" id="login-password" required placeholder="••••••••"
+                  <input type="password" id="login-password" required placeholder="បញ្ចូលពាក្យសម្ងាត់..."
                     class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs text-slate-900 dark:text-white focus:ring-2 focus:ring-blue-600 focus:outline-none">
                 </div>
 
@@ -300,33 +299,6 @@
                   <span>ចូលប្រើប្រព័ន្ធ</span> ➜
                 </button>
               </form>
-
-              <!-- Fast Role Switching Demo Chips -->
-              <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
-                <p class="text-[11px] font-bold text-slate-500 mb-2">⚡ ចូលរហ័សសាកល្បងតាមតួនាទី (Demo Fast Switch):</p>
-                <div class="flex flex-wrap gap-1.5 text-[11px]">
-                  <button onclick="quickRoleLogin('director')"
-                    class="px-2.5 py-1 bg-blue-100 hover:bg-blue-200 text-blue-900 rounded-lg font-bold border border-blue-300">
-                    🏛️ នាយកសាលា
-                  </button>
-                  <button onclick="quickRoleLogin('secretary')"
-                    class="px-2.5 py-1 bg-indigo-100 hover:bg-indigo-200 text-indigo-900 rounded-lg font-bold border border-indigo-300">
-                    📝 លេខាធិការ
-                  </button>
-                  <button onclick="quickRoleLogin('librarian')"
-                    class="px-2.5 py-1 bg-amber-100 hover:bg-amber-200 text-amber-900 rounded-lg font-bold border border-amber-300">
-                    📚 បណ្ណារក្ស
-                  </button>
-                  <button onclick="quickRoleLogin('teacher')"
-                    class="px-2.5 py-1 bg-emerald-100 hover:bg-emerald-200 text-emerald-900 rounded-lg font-bold border border-emerald-300">
-                    👨‍🏫 គ្រូបង្រៀន
-                  </button>
-                  <button onclick="quickRoleLogin('student')"
-                    class="px-2.5 py-1 bg-purple-100 hover:bg-purple-200 text-purple-900 rounded-lg font-bold border border-purple-300">
-                    🎓 សិស្សានុសិស្ស
-                  </button>
-                </div>
-              </div>
             </div>
 
             <!-- TAB 2: GUEST / VIEW-ONLY ACCESS (NAME & PHONE NUMBER TRACKING) -->
@@ -413,8 +385,8 @@
 
           <div
             class="pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
-            <span>MoEYS Primary School Standard v4.2</span>
-            <span>© 2026 ក្រសួងអប់រំ យុវជន និងកីឡា</span>
+            <span>ប្រព័ន្ធគ្រប់គ្រងសាលាបឋមសិក្សាភ្នំពុំ</span>
+            <span>© 2026 សាលាបឋមសិក្សាភ្នំពុំ</span>
           </div>
         </div>
       </div>
@@ -472,25 +444,8 @@
           </div>
         </div>
 
-        <!-- Top Right Controls: Academic Year, Role Switcher, Google Drive, Print, Language, Dark Mode & User Profile -->
+        <!-- Top Right Controls: Academic Year, Google Drive, Print, Language, Dark Mode & User Profile -->
         <div class="flex items-center gap-2 sm:gap-2.5 text-xs">
-
-          <!-- DEMO FAST SWITCH ROLE SELECTOR IN HEADER -->
-          <div
-            class="flex items-center gap-1.5 bg-gradient-to-r from-amber-500/20 to-blue-900/80 px-2.5 py-1 rounded-xl border border-amber-400/50 shadow-xs">
-            <span class="text-amber-300 font-bold flex items-center gap-1">
-              <span>⚡</span> <span class="hidden lg:inline">តួនាទីសាកល្បង:</span>
-            </span>
-            <select id="header-fast-role-switch" onchange="quickRoleLogin(this.value)"
-              class="bg-blue-950 text-amber-300 font-bold rounded-lg px-2 py-0.5 border border-amber-400/60 focus:outline-none cursor-pointer">
-              <option value="director">🏛️ នាយកសាលា (Director - ឃើញទាំងអស់)</option>
-              <option value="teacher">👨‍🏫 គ្រូបង្រៀន (Teacher - ឃើញតែថ្នាក់៦ក)</option>
-              <option value="student">🎓 សិស្ស (Student - ឃើញតែខ្ញុំ)</option>
-              <option value="secretary">📝 លេខាធិការ (Secretary)</option>
-              <option value="librarian">📚 បណ្ណារក្ស (Librarian)</option>
-              <option value="guest">👤 ភ្ញៀវ (Guest - View Only)</option>
-            </select>
-          </div>
 
           <!-- Academic Year Selector -->
           <div
@@ -508,10 +463,14 @@
 
           <!-- Cloud Sync Google Drive Button -->
           <button onclick="openDriveSyncModal()"
-            class="px-2.5 py-1.5 bg-blue-800/80 hover:bg-blue-700 text-blue-100 rounded-xl border border-blue-600 flex items-center gap-1 transition-all"
-            title="Google Drive Cloud Sync">
+            class="px-2.5 py-1.5 bg-blue-800/80 hover:bg-blue-700 text-blue-100 rounded-xl border border-blue-600 flex items-center gap-1.5 transition-all"
+            title="Google Drive Cloud Sync & Auto-Sync Status">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
             <span>☁️</span>
-            <span class="hidden md:inline font-semibold">Drive Backup</span>
+            <span class="hidden md:inline font-semibold">Drive Sync (<span id="header-sync-interval-label">1mn</span>)</span>
           </button>
 
           <!-- Universal Print Modal Button -->
@@ -708,7 +667,7 @@
                 <div>
                   <h2 class="font-moul text-xl sm:text-2xl text-amber-300">សាលាបឋមសិក្សាភ្នំពុំ</h2>
                   <p class="text-blue-200 text-xs mt-0.5">Phnom Pom Primary School •
-                    គ្រប់គ្រងតាមប្រព័ន្ធស្តង់ដារក្រសួងអប់រំ យុវជន និងកីឡា</p>
+                    ប្រព័ន្ធគ្រប់គ្រងរដ្ឋបាល និងការសិក្សាសាលាបឋមសិក្សាភ្នំពុំ</p>
                 </div>
 
                 <p class="text-slate-300 text-xs">
@@ -961,7 +920,7 @@
                 </div>
                 <p class="text-[10.5px] text-slate-400 dark:text-slate-500 mt-1.5 flex items-center justify-between">
                   <span>ឆ្នាំ ២០២៤ - ២០២៥</span>
-                  <span class="text-purple-600 font-bold">MoEYS Verified</span>
+                  <span class="text-purple-600 font-bold">បានផ្ទៀងផ្ទាត់ផ្លូវការ</span>
                 </p>
               </div>
 
@@ -1084,7 +1043,7 @@
               class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
               <div>
                 <h2 class="font-moul text-sm sm:text-base text-slate-800 dark:text-slate-100">
-                  បញ្ជីឈ្មោះសិស្សានុសិស្សផ្លូវការ (MoEYS Student Registry)
+                  បញ្ជីឈ្មោះសិស្សានុសិស្សផ្លូវការ (Student Registry)
                 </h2>
                 <p class="text-xs text-slate-500">គ្រប់គ្រងប្រវត្តិរូប លក្ខខណ្ឌជីវភាព និងទិន្នន័យផ្ទាល់ខ្លួន</p>
               </div>
@@ -1181,8 +1140,8 @@
                     តារាងស្រង់ពិន្ទុ ចំណាត់ថ្នាក់ & សៀវភៅតាមដាន (Dual Scoring System)
                   </h2>
                   <span
-                    class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 dark:bg-purple-900/60 text-purple-800 dark:text-purple-300">
-                    MoEYS Standard
+                    class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-blue-100 dark:bg-blue-900/60 text-blue-800 dark:text-blue-300">
+                    សាលាបឋមសិក្សាភ្នំពុំ
                   </span>
                 </div>
                 <p class="text-xs text-slate-500">គណនាមធ្យមភាគ និងកម្រិតនិទ្ទេសខ្មែរ៖ ល្អណាស់, ល្អ, ល្អបង្គួរ, មធ្យម,
@@ -1658,9 +1617,9 @@
               class="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-4">
               <div>
                 <h2 class="font-moul text-sm sm:text-base text-slate-800 dark:text-slate-100">
-                  ការគ្រប់គ្រងការផ្ទេរសិស្សចេញ-ចូល (Student Transfer MoEYS Letters)
+                  ការគ្រប់គ្រងការផ្ទេរសិស្សចេញ-ចូល (Student Transfer Letters)
                 </h2>
-                <p class="text-xs text-slate-500">លិខិតផ្ទេរផ្លូវការស្របតាមទម្រង់ក្រសួងអប់រំ យុវជន និងកីឡា
+                <p class="text-xs text-slate-500">លិខិតផ្ទេរផ្លូវការ សាលាបឋមសិក្សាភ្នំពុំ
                   (ត្រូវការការអនុម័តពីនាយកសាលា)</p>
               </div>
 
@@ -1890,13 +1849,12 @@
     <!-- ======================================================================= -->
     <div id="official-print-container" class="print-only p-4 bg-white text-black font-battambang">
 
-      <!-- Royal Kingdom & Ministry Header -->
+      <!-- Royal Kingdom & School Header -->
       <div class="flex justify-between items-start border-b-2 border-black pb-3 mb-4">
         <div class="text-xs space-y-0.5">
-          <p class="font-bold">ក្រសួងអប់រំ យុវជន និងកីឡា</p>
+          <p class="font-moul font-bold text-sm text-blue-950">សាលាបឋមសិក្សាភ្នំពុំ</p>
           <p>មន្ទីរអប់រំ យុវជន និងកីឡា ខេត្តបាត់ដំបង</p>
           <p>ការិយាល័យអប់រំ យុវជន និងកីឡា ស្រុកភ្នំព្រឹក</p>
-          <p class="font-moul font-bold text-sm text-blue-950 pt-1">សាលាបឋមសិក្សាភ្នំពុំ</p>
           <p class="font-mono text-[10px]">កូដសាលា៖ 020401015</p>
         </div>
 
@@ -1937,8 +1895,8 @@
 
           <!-- Official Round Stamp (Toggleable) -->
           <div id="print-stamp-element" class="round-stamp my-1 mx-auto">
-            <span class="text-[9px] font-moul">ក្រសួងអប់រំ យុវជន និងកីឡា</span>
-            <span class="text-[10px] font-moul text-red-700 font-bold my-0.5">សាលាបឋមសិក្សា<br>ភ្នំពុំ</span>
+            <span class="text-[9px] font-moul">សាលាបឋមសិក្សាភ្នំពុំ</span>
+            <span class="text-[10px] font-moul text-red-700 font-bold my-0.5">ស្រុកភ្នំព្រឹក<br>ខេត្តបាត់ដំបង</span>
             <span class="text-[8px] font-mono font-bold">★ 020401015 ★</span>
           </div>
 
@@ -2216,16 +2174,33 @@ function doPost(e) {
             </button>
           </div>
 
-          <!-- Auto-Sync Toggle -->
-          <div class="p-3 bg-slate-100 dark:bg-slate-800/80 rounded-xl flex items-center justify-between">
-            <div>
-              <p class="font-bold text-slate-800 dark:text-slate-200 text-xs">ធ្វើសមកាលកម្មស្វ័យប្រវត្ត (Auto-Sync On Data Change)</p>
-              <p class="text-[10.5px] text-slate-500">រក្សាទុកទៅ Google Drive ដោយស្វ័យប្រវត្តរាល់ពេលមានការបញ្ចូលពិន្ទុ ឬវត្តមាន</p>
+          <!-- Auto-Sync & Periodic Interval Settings Card -->
+          <div class="p-3.5 bg-slate-100 dark:bg-slate-800/80 rounded-2xl space-y-2.5">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="font-bold text-slate-800 dark:text-slate-200 text-xs">ធ្វើសមកាលកម្មស្វ័យប្រវត្ត (Auto-Sync On Data Change)</p>
+                <p class="text-[10.5px] text-slate-500">រក្សាទុកទៅ Google Drive ដោយស្វ័យប្រវត្តរាល់ពេលមានការបញ្ចូលពិន្ទុ ឬវត្តមាន</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="toggle-auto-sync-checkbox" onchange="toggleAutoSyncSetting(this.checked)" class="sr-only peer" checked>
+                <div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+              </label>
             </div>
-            <label class="relative inline-flex items-center cursor-pointer">
-              <input type="checkbox" id="toggle-auto-sync-checkbox" onchange="toggleAutoSyncSetting(this.checked)" class="sr-only peer" checked>
-              <div class="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
-            </label>
+
+            <!-- Periodic Sync Time Interval Dropdown -->
+            <div class="flex items-center justify-between pt-2 border-t border-slate-200 dark:border-slate-700 text-xs">
+              <span class="text-slate-700 dark:text-slate-300 font-bold flex items-center gap-1.5">
+                <span>⏱️</span> <span>ចន្លោះពេល Auto-Sync ទិន្នន័យ (Periodic Sync Interval):</span>
+              </span>
+              <select id="select-sync-interval" onchange="changeAutoSyncInterval(this.value)"
+                class="bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-blue-700 dark:text-blue-300 font-bold rounded-xl px-2.5 py-1 text-xs focus:ring-2 focus:ring-blue-600 focus:outline-none cursor-pointer">
+                <option value="30">⚡ រៀងរាល់ 30 វិនាទី (Every 30s)</option>
+                <option value="60" selected>⏱️ រៀងរាល់ 1 នាទី (Every 1 min)</option>
+                <option value="120">⏳ រៀងរាល់ 2 នាទី (Every 2 mins)</option>
+                <option value="300">🕒 រៀងរាល់ 5 នាទី (Every 5 mins)</option>
+                <option value="0">⏹️ បិទ (Manual Sync Only)</option>
+              </select>
+            </div>
           </div>
         </div>
 
@@ -2292,10 +2267,10 @@ function doPost(e) {
       ],
 
       teachers: [
-        { id: 't-1', staffCode: 'MOEYS-104921', nameKhmer: 'លោក លីម សន', nameLatin: 'Lim Sorn', gender: 'M', role: 'director', phone: '087 99 19 77', qualification: 'បរិញ្ញាបត្រជាន់ខ្ពស់ គ្រប់គ្រងអប់រំ', assignedGrade: null },
-        { id: 't-2', staffCode: 'MOEYS-108234', nameKhmer: 'លោក ចាន់ វុទ្ធី', nameLatin: 'Chan Vuthy', gender: 'M', role: 'teacher', phone: '017 890 123', qualification: 'បរិញ្ញាបត្រគរុកោសល្យ', assignedGrade: 6, assignedSection: 'ក' },
-        { id: 't-3', staffCode: 'MOEYS-112045', nameKhmer: 'អ្នកគ្រូ ស៊ឹម ស្រីមុំ', nameLatin: 'Sim Sreymom', gender: 'F', role: 'secretary', phone: '092 445 566', qualification: 'គរុកោសល្យ ១២+២', assignedGrade: 1, assignedSection: 'ក' },
-        { id: 't-4', staffCode: 'MOEYS-115890', nameKhmer: 'អ្នកគ្រូ ហេង រចនា', nameLatin: 'Heng Rachana', gender: 'F', role: 'librarian', phone: '089 778 899', qualification: 'បរិញ្ញាបត្រអក្សរសាស្ត្រ', assignedGrade: null }
+        { id: 't-1', staffCode: 'PPS-104921', nameKhmer: 'លោក លីម សន', nameLatin: 'Lim Sorn', gender: 'M', role: 'director', phone: '087 99 19 77', qualification: 'បរិញ្ញាបត្រជាន់ខ្ពស់ គ្រប់គ្រងអប់រំ', assignedGrade: null },
+        { id: 't-2', staffCode: 'PPS-108234', nameKhmer: 'លោក ចាន់ វុទ្ធី', nameLatin: 'Chan Vuthy', gender: 'M', role: 'teacher', phone: '017 890 123', qualification: 'បរិញ្ញាបត្រគរុកោសល្យ', assignedGrade: 6, assignedSection: 'ក' },
+        { id: 't-3', staffCode: 'PPS-112045', nameKhmer: 'អ្នកគ្រូ ស៊ឹម ស្រីមុំ', nameLatin: 'Sim Sreymom', gender: 'F', role: 'secretary', phone: '092 445 566', qualification: 'គរុកោសល្យ ១២+២', assignedGrade: 1, assignedSection: 'ក' },
+        { id: 't-4', staffCode: 'PPS-115890', nameKhmer: 'អ្នកគ្រូ ហេង រចនា', nameLatin: 'Heng Rachana', gender: 'F', role: 'librarian', phone: '089 778 899', qualification: 'បរិញ្ញាបត្រអក្សរសាស្ត្រ', assignedGrade: null }
       ],
 
       scores: [
@@ -2316,9 +2291,9 @@ function doPost(e) {
       ],
 
       libraryBooks: [
-        { id: 'b-1', code: 'LIB-001', title: 'រឿងធនញ្ជ័យ', author: 'ក្រសួងអប់រំ', category: 'រឿងនិទាន', total: 20, available: 16 },
-        { id: 'b-2', code: 'LIB-002', title: 'សៀវភៅពុម្ពភាសាខ្មែរ ថ្នាក់ទី៦', author: 'MoEYS', category: 'សៀវភៅពុម្ពគោល', total: 40, available: 38 },
-        { id: 'b-3', code: 'LIB-003', title: 'គណិតវិទ្យាបឋមសិក្សា', author: 'MoEYS', category: 'សៀវភៅពុម្ពគោល', total: 35, available: 32 }
+        { id: 'b-1', code: 'LIB-001', title: 'រឿងធនញ្ជ័យ', author: 'សាលាបឋមសិក្សាភ្នំពុំ', category: 'រឿងនិទាន', total: 20, available: 16 },
+        { id: 'b-2', code: 'LIB-002', title: 'សៀវភៅពុម្ពភាសាខ្មែរ ថ្នាក់ទី៦', author: 'សាលាបឋមសិក្សាភ្នំពុំ', category: 'សៀវភៅពុម្ពគោល', total: 40, available: 38 },
+        { id: 'b-3', code: 'LIB-003', title: 'គណិតវិទ្យាបឋមសិក្សា', author: 'សាលាបឋមសិក្សាភ្នំពុំ', category: 'សៀវភៅពុម្ពគោល', total: 35, available: 32 }
       ],
 
       transfers: [
@@ -2412,27 +2387,61 @@ function doPost(e) {
 
     function handleAccountLogin(e) {
       e.preventDefault();
-      const id = document.getElementById('login-identifier').value.trim();
+      const id = document.getElementById('login-identifier').value.trim().toLowerCase();
       const pass = document.getElementById('login-password').value.trim();
+      const errElem = document.getElementById('login-error-msg');
 
-      if (id.includes('limsorn') || id.includes('director')) {
-        loginAs({ role: 'director', name: 'លោក លីម សន', title: 'នាយកសាលា' });
-      } else if (id.includes('secretary') || id.includes('sreymom')) {
+      // 1. ADMIN / DIRECTOR LOGIN VALIDATION (limsorn / 1212)
+      if (id === 'limsorn' || id === 'admin' || id === 'limsorn9@gmail.com' || id === 'director') {
+        if (pass !== '1212') {
+          if (errElem) {
+            errElem.innerText = '❌ ពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ! (សម្រាប់គណនី Admin / limsorn ពាក្យសម្ងាត់គឺ 1212)';
+            errElem.classList.remove('hidden');
+          } else {
+            alert('❌ ពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ! (ពាក្យសម្ងាត់ Admin គឺ 1212)');
+          }
+          return;
+        }
+        if (errElem) errElem.classList.add('hidden');
+        loginAs({ role: 'director', name: 'លោក លីម សន', title: 'នាយកសាលា (Admin)' });
+        return;
+      }
+
+      // 2. OTHER ROLES LOGIN
+      if (errElem) errElem.classList.add('hidden');
+
+      if (id.includes('secretary') || id.includes('sreymom')) {
         loginAs({ role: 'secretary', name: 'អ្នកគ្រូ ស៊ឹម ស្រីមុំ', title: 'លេខាធិការ' });
       } else if (id.includes('librarian') || id.includes('rachana')) {
         loginAs({ role: 'librarian', name: 'អ្នកគ្រូ ហេង រចនា', title: 'បណ្ណារក្ស' });
       } else if (id.includes('teacher') || id.includes('vuthy')) {
-        loginAs({ role: 'teacher', name: 'លោក ចាន់ វុទ្ធី', title: 'គ្រូបង្រៀនថ្នាក់ទី៦' });
-      } else if (id.startsWith('STU') || id.includes('student')) {
-        loginAs({ role: 'student', name: 'សុខ សុវណ្ណារ៉ា', title: 'សិស្សថ្នាក់ទី៦ក' });
+        loginAs({ role: 'teacher', name: 'លោក ចាន់ វុទ្ធី', title: 'គ្រូបង្រៀនថ្នាក់ទី៦', assignedGrade: 6, assignedSection: 'ក' });
+      } else if (id.startsWith('stu') || id.includes('student')) {
+        loginAs({ role: 'student', name: 'សុខ សុវណ្ណារ៉ា', title: 'សិស្សថ្នាក់ទី៦ក', studentId: 'st-1', studentCode: 'STU-2024-001' });
       } else {
-        loginAs({ role: 'director', name: 'លោក លីម សន', title: 'នាយកសាលា' });
+        if (pass !== '1212' && pass !== '123456') {
+          if (errElem) {
+            errElem.innerText = '❌ ឈ្មោះគណនី ឬពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ!';
+            errElem.classList.remove('hidden');
+          }
+          return;
+        }
+        loginAs({ role: 'teacher', name: 'លោក ចាន់ វុទ្ធី', title: 'គ្រូបង្រៀន (ថ្នាក់ទី៦ក)', assignedGrade: 6, assignedSection: 'ក' });
       }
     }
 
     function quickRoleLogin(role) {
+      // Security Check: If switching to Admin/Director, require password 1212
+      if (role === 'director') {
+        const pass = prompt('🔒 គណនី Admin / នាយកសាលា (limsorn) តម្រូវឱ្យបញ្ចូលពាក្យសម្ងាត់ (Password: 1212)៖');
+        if (pass !== '1212') {
+          alert('❌ ពាក្យសម្ងាត់មិនត្រឹមត្រូវទេ! មិនអាចចូលប្រើប្រាស់គណនី Admin បានឡើយ។');
+          return;
+        }
+      }
+
       const roleMap = {
-        director: { role: 'director', name: 'លោក លីម សន', title: 'នាយកសាលា' },
+        director: { role: 'director', name: 'លោក លីម សន', title: 'នាយកសាលា (Admin)' },
         secretary: { role: 'secretary', name: 'អ្នកគ្រូ ស៊ឹម ស្រីមុំ', title: 'លេខាធិការ' },
         librarian: { role: 'librarian', name: 'អ្នកគ្រូ ហេង រចនា', title: 'បណ្ណារក្ស' },
         teacher: { role: 'teacher', name: 'លោក ចាន់ វុទ្ធី', title: 'គ្រូបង្រៀន (ថ្នាក់ទី៦ក)', assignedGrade: 6, assignedSection: 'ក' },
@@ -2441,10 +2450,6 @@ function doPost(e) {
       };
       const user = roleMap[role] || roleMap.director;
       loginAs(user);
-
-      // Sync Header Dropdown
-      const headerSelect = document.getElementById('header-fast-role-switch');
-      if (headerSelect) headerSelect.value = role;
     }
 
     function handleGuestLogin(e) {
@@ -2501,10 +2506,6 @@ function doPost(e) {
 
       const sidebarRole = document.getElementById('sidebar-role-label');
       if (sidebarRole) sidebarRole.innerText = user.title + ' (' + (user.role ? user.role.toUpperCase() : '') + ')';
-
-      // Sync Header Dropdown
-      const headerSelect = document.getElementById('header-fast-role-switch');
-      if (headerSelect && user.role) headerSelect.value = user.role;
 
       applyRbacRestrictions();
       switchTab('dashboard');
@@ -3080,9 +3081,9 @@ function doPost(e) {
 
       const users = [
         { name: 'លោក លីម សន', email: 'limsorn9@gmail.com', role: 'director', roleKh: 'នាយកសាលា', phone: '087 99 19 77' },
-        { name: 'អ្នកគ្រូ ស៊ឹម ស្រីមុំ', email: 'sreymom.sim@moeys.gov.kh', role: 'secretary', roleKh: 'លេខាធិការ', phone: '092 445 566' },
-        { name: 'អ្នកគ្រូ ហេង រចនា', email: 'rachana.heng@moeys.gov.kh', role: 'librarian', roleKh: 'បណ្ណារក្ស', phone: '089 778 899' },
-        { name: 'លោក ចាន់ វុទ្ធី', email: 'vuthy.chan@moeys.gov.kh', role: 'teacher', roleKh: 'គ្រូបង្រៀនថ្នាក់ទី៦', phone: '017 890 123' },
+        { name: 'អ្នកគ្រូ ស៊ឹម ស្រីមុំ', email: 'sreymom@phnompom.edu.kh', role: 'secretary', roleKh: 'លេខាធិការ', phone: '092 445 566' },
+        { name: 'អ្នកគ្រូ ហេង រចនា', email: 'rachana@phnompom.edu.kh', role: 'librarian', roleKh: 'បណ្ណារក្ស', phone: '089 778 899' },
+        { name: 'លោក ចាន់ វុទ្ធី', email: 'vuthy@phnompom.edu.kh', role: 'teacher', roleKh: 'គ្រូបង្រៀនថ្នាក់ទី៦', phone: '017 890 123' },
         { name: 'សុខ សុវណ្ណារ៉ា', email: 'STU-2024-001', role: 'student', roleKh: 'សិស្សានុសិស្ស', phone: '012 334 455' }
       ];
 
@@ -3588,7 +3589,7 @@ function doPost(e) {
     // --- 13. EXCEL EXPORTS & GOOGLE DRIVE SYNC ---
     function exportStudentsToExcel() {
       const rows = [
-        ['ក្រសួងអប់រំ យុវជន និងកីឡា', '', '', '', DB.school.nameKhmer],
+        ['សាលាបឋមសិក្សាភ្នំពុំ', '', '', '', DB.school.nameKhmer],
         ['សាលាបឋមសិក្សា៖ ' + DB.school.nameKhmer, '', '', 'ឆ្នាំសិក្សា៖ ' + DB.school.academicYear],
         [],
         ['ល.រ', 'អត្តលេខ', 'គោត្តនាម-នាម', 'Name Latin', 'ភេទ', 'ថ្ងៃខែឆ្នាំកំណើត', 'ថ្នាក់', 'ជីវភាព', 'អាណាព្យាបាល', 'ទូរស័ព្ទ']
@@ -3604,7 +3605,7 @@ function doPost(e) {
 
     function exportScoresToExcel() {
       const rows = [
-        ['ក្រសួងអប់រំ យុវជន និងកីឡា', '', '', '', DB.school.nameKhmer],
+        ['សាលាបឋមសិក្សាភ្នំពុំ', '', '', '', DB.school.nameKhmer],
         ['តារាងពិន្ទុ & ចំណាត់ថ្នាក់', '', '', 'ឆ្នាំសិក្សា៖ ' + DB.school.academicYear],
         [],
         ['ល.រ', 'អត្តលេខ', 'ឈ្មោះសិស្ស', 'ភេទ', 'អំណាន', 'សំណេរ', 'គណិត', 'វិទ្យាសាស្ត្រ', 'សង្គម', 'សីលធម៌', 'សិល្បៈ', 'សរុប', 'មធ្យមភាគ', 'និទ្ទេស']
@@ -3637,6 +3638,7 @@ function doPost(e) {
 
     // --- 14. GOOGLE DRIVE TWO-WAY SYNCHRONIZATION ENGINE ---
     let autoSyncDebounceTimer = null;
+    let periodicSyncIntervalTimer = null;
 
     function openDriveSyncModal() {
       const modal = document.getElementById('modal-drive-sync');
@@ -3653,6 +3655,10 @@ function doPost(e) {
         autoSyncCheck.checked = savedAutoSync !== null ? savedAutoSync === 'true' : true;
         DB.school.autoSyncEnabled = autoSyncCheck.checked;
       }
+
+      const syncSelect = document.getElementById('select-sync-interval');
+      const savedInterval = localStorage.getItem('phnom_pom_sync_interval') || '60';
+      if (syncSelect) syncSelect.value = savedInterval;
 
       updateDriveStatusBadge();
     }
@@ -3698,11 +3704,13 @@ function doPost(e) {
           alert('✓ ការភ្ជាប់ទៅកាន់ Google Drive ជោគជ័យ ១០០%!\n\nFolder ID: 1GCMdTew9rgw5lwkBhmsEuy8WBGELNM1g\nTarget: phnom_pom_primary_school_db.json');
           DB.school.lastSyncTime = new Date().toLocaleTimeString('km-KH');
           updateDriveStatusBadge();
+          startPeriodicAutoSyncTimer(localStorage.getItem('phnom_pom_sync_interval') || 60);
         })
         .catch(err => {
           alert('✓ បានរក្សាទុក Webhook URL ជោគជ័យ!\n(បានភ្ជាប់ជាមួយ Google Drive: limsorn9@gmail.com)');
           DB.school.lastSyncTime = new Date().toLocaleTimeString('km-KH');
           updateDriveStatusBadge();
+          startPeriodicAutoSyncTimer(localStorage.getItem('phnom_pom_sync_interval') || 60);
         });
     }
 
@@ -3720,6 +3728,8 @@ function doPost(e) {
         guestVisitors: DB.guestVisitors,
         exportedAt: new Date().toISOString()
       };
+
+      DB.lastKnownRemoteExportTime = payload.exportedAt;
 
       // Always save to local storage as offline cache
       localStorage.setItem('phnom_pom_primary_school_db_offline', JSON.stringify(payload));
@@ -3779,6 +3789,7 @@ function doPost(e) {
             DB.library = data.library || DB.library;
             DB.transfers = data.transfers || DB.transfers;
             if (data.school) DB.school = { ...DB.school, ...data.school };
+            if (data.exportedAt) DB.lastKnownRemoteExportTime = data.exportedAt;
 
             DB.school.lastSyncTime = new Date().toLocaleTimeString('km-KH');
             renderAllViews();
@@ -3805,6 +3816,66 @@ function doPost(e) {
       autoSyncDebounceTimer = setTimeout(() => {
         performCloudPushToDrive(true);
       }, 2500);
+    }
+
+    function startPeriodicAutoSyncTimer(intervalSeconds) {
+      if (periodicSyncIntervalTimer) {
+        clearInterval(periodicSyncIntervalTimer);
+        periodicSyncIntervalTimer = null;
+      }
+
+      const sec = Number(intervalSeconds);
+      const lbl = document.getElementById('header-sync-interval-label');
+
+      if (sec <= 0) {
+        if (lbl) lbl.innerText = 'Manual';
+        return;
+      }
+
+      const labelMap = { 30: '30s', 60: '1mn', 120: '2mn', 300: '5mn' };
+      if (lbl) lbl.innerText = labelMap[sec] || (sec + 's');
+
+      periodicSyncIntervalTimer = setInterval(() => {
+        performBackgroundCloudPull();
+      }, sec * 1000);
+    }
+
+    function changeAutoSyncInterval(seconds) {
+      localStorage.setItem('phnom_pom_sync_interval', seconds);
+      startPeriodicAutoSyncTimer(seconds);
+      const labelMap = { 30: '30 វិនាទី', 60: '1 នាទី', 120: '2 នាទី', 300: '5 នាទី', 0: 'បិទ (Manual Sync Only)' };
+      alert('✓ បានកំណត់ចន្លោះពេល Auto-Sync៖ ' + (labelMap[seconds] || (seconds + ' វិនាទី')));
+    }
+
+    function performBackgroundCloudPull() {
+      const webhookUrl = localStorage.getItem('phnom_pom_gdrive_webhook') || (document.getElementById('input-drive-webhook-url')?.value || '').trim();
+      if (!webhookUrl) return;
+
+      fetch(webhookUrl, { method: 'GET' })
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.students && data.exportedAt) {
+            if (data.exportedAt !== DB.lastKnownRemoteExportTime) {
+              DB.lastKnownRemoteExportTime = data.exportedAt;
+              DB.students = data.students || DB.students;
+              DB.scores = data.scores || DB.scores;
+              DB.attendance = data.attendance || DB.attendance;
+              DB.census = data.census || DB.census;
+              DB.teachers = data.teachers || DB.teachers;
+              DB.library = data.library || DB.library;
+              DB.transfers = data.transfers || DB.transfers;
+              if (data.school) DB.school = { ...DB.school, ...data.school };
+
+              DB.school.lastSyncTime = new Date().toLocaleTimeString('km-KH');
+              renderAllViews();
+              updateDriveStatusBadge();
+              console.log('☁️ Background Auto-Sync: Refreshed latest data from Google Drive at ' + DB.school.lastSyncTime);
+            }
+          }
+        })
+        .catch(err => {
+          // Silent background fallback
+        });
     }
 
     function exportDatabaseJsonFile() {
@@ -3934,6 +4005,8 @@ function doPost(e) {
     // Auto Initializer
     window.addEventListener('DOMContentLoaded', () => {
       initAuth();
+      const savedInterval = localStorage.getItem('phnom_pom_sync_interval') || 60;
+      startPeriodicAutoSyncTimer(savedInterval);
     });
   </script>
 </body>
