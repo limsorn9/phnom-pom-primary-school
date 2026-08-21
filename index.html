@@ -234,7 +234,6 @@
           <div class="mt-8 pt-6 border-t border-blue-800/60 text-[11px] text-blue-200/80 space-y-1 relative z-10">
             <p>📍 ឃុំបារាំងធ្លាក់ ស្រុកភ្នំព្រឹក ខេត្តបាត់ដំបង</p>
             <p>📞 នាយកសាលា៖ 087 99 19 77</p>
-            <p class="text-amber-300/90 font-mono text-[10px]">Cloud Backup: limsorn9@gmail.com</p>
           </div>
         </div>
 
@@ -2068,7 +2067,7 @@
             </div>
             <div class="p-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700/60">
               <span class="text-slate-400 block text-[10px]">គណនី Google Drive (Owner):</span>
-              <strong class="text-slate-800 dark:text-slate-200 font-bold">limsorn9@gmail.com</strong>
+              <strong class="text-slate-800 dark:text-slate-200 font-bold">គណនីសាលា (Connected)</strong>
             </div>
           </div>
 
@@ -3704,7 +3703,7 @@ function doPost(e) {
           startPeriodicAutoSyncTimer(localStorage.getItem('phnom_pom_sync_interval') || 60);
         })
         .catch(err => {
-          alert('✓ បានរក្សាទុក Webhook URL ជោគជ័យ!\n(បានភ្ជាប់ជាមួយ Google Drive: limsorn9@gmail.com)');
+          alert('✓ បានរក្សាទុក Webhook URL ជោគជ័យ!\n(បានភ្ជាប់ជាមួយ Google Drive សាលា)');
           DB.school.lastSyncTime = new Date().toLocaleTimeString('km-KH');
           updateDriveStatusBadge();
           startPeriodicAutoSyncTimer(localStorage.getItem('phnom_pom_sync_interval') || 60);
@@ -3751,7 +3750,7 @@ function doPost(e) {
           DB.school.lastSyncTime = new Date().toLocaleTimeString('km-KH');
           updateDriveStatusBadge();
           if (!isBackground) {
-            alert('✓ បានបញ្ជូនទិន្នន័យទៅកាន់ Google Drive (limsorn9@gmail.com) និងរក្សាទុកក្នុង Local Storage រួចរាល់!');
+            alert('✓ បានបញ្ជូនទិន្នន័យទៅកាន់ Google Drive និងរក្សាទុកក្នុង Local Storage រួចរាល់!');
           }
         });
       } else {
