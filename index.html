@@ -4461,7 +4461,7 @@ function updateGoogleSpreadsheet(folder, data) {
       }
     }
 
-    function loginAs(user) {
+    function loginAs(user, isRestore = false) {
       const userKey = user.staffCode || user.studentCode || user.role || 'director';
       try {
         const savedProfile = JSON.parse(localStorage.getItem('phnom_pom_user_profile_' + userKey) || '{}');
@@ -4476,6 +4476,10 @@ function updateGoogleSpreadsheet(folder, data) {
       } catch(e) {}
 
       DB.currentUser = user;
+      try {
+        localStorage.setItem('phnom_pom_current_user_session', JSON.stringify(user));
+      } catch(e) {}
+
       document.getElementById('auth-container').classList.add('hidden');
       document.getElementById('app-shell').classList.remove('hidden');
       document.getElementById('app-shell').classList.add('flex');
@@ -4498,14 +4502,21 @@ function updateGoogleSpreadsheet(folder, data) {
       if (sidebarRole) sidebarRole.innerText = user.title + ' (' + (user.role ? user.role.toUpperCase() : '') + ')';
 
       applyRbacRestrictions();
-      logUserActivity('ចូលប្រើប្រាស់ប្រព័ន្ធ (Login)', 'ផ្ទាំងដើម', 'គណនី៖ ' + user.name + ' (' + user.title + ')');
-      switchTab('dashboard');
+      if (!isRestore) {
+        logUserActivity('ចូលប្រើប្រាស់ប្រព័ន្ធ (Login)', 'ផ្ទាំងដើម', 'គណនី៖ ' + user.name + ' (' + user.title + ')');
+        const targetTab = localStorage.getItem('phnom_pom_active_tab') || 'dashboard';
+        switchTab(targetTab);
+      }
       renderAllViews();
     }
 
     function handleLogout() {
       logUserActivity('ចាកចេញពីប្រព័ន្ធ (Logout)', 'ច្រកចូល');
       DB.currentUser = null;
+      try {
+        localStorage.removeItem('phnom_pom_current_user_session');
+        localStorage.removeItem('phnom_pom_active_tab');
+      } catch(e) {}
       document.getElementById('app-shell').classList.add('hidden');
       document.getElementById('app-shell').classList.remove('flex');
       document.getElementById('auth-container').classList.remove('hidden');
@@ -4566,6 +4577,9 @@ function updateGoogleSpreadsheet(folder, data) {
     // --- 3. NAVIGATION & TAB SWITCHING ---
     function switchTab(tabId) {
       DB.activeTab = tabId;
+      try {
+        localStorage.setItem('phnom_pom_active_tab', tabId);
+      } catch(e) {}
       logUserActivity('បើកមើលទំព័រ ' + tabId, 'ថេប ' + tabId);
       document.querySelectorAll('.tab-pane').forEach(p => p.classList.add('hidden'));
 
@@ -7248,7 +7262,10 @@ function updateGoogleSpreadsheet(folder, data) {
 
     function toggleDarkMode() {
       document.documentElement.classList.toggle('dark');
-      DB.isDarkMode = !DB.isDarkMode;
+      DB.isDarkMode = document.documentElement.classList.contains('dark');
+      try {
+        localStorage.setItem('phnom_pom_dark_mode', DB.isDarkMode);
+      } catch(e) {}
     }
 
     const I18N_DICT = {
@@ -7394,6 +7411,9 @@ function updateGoogleSpreadsheet(folder, data) {
 
     function changeAcademicYear(yr) {
       DB.school.academicYear = yr;
+      try {
+        localStorage.setItem('phnom_pom_academic_year', yr);
+      } catch(e) {}
       document.querySelectorAll('.active-year-label').forEach(el => el.innerText = yr);
       logUserActivity('ប្តូរឆ្នាំសិក្សាទៅកាន់ ' + yr, 'ការកំណត់ប្រព័ន្ធ', 'ឆ្នាំសិក្សា ' + yr);
       alert('បានប្តូរទៅកាន់ឆ្នាំសិក្សា៖ ' + yr);
@@ -8195,11 +8215,44 @@ function updateGoogleSpreadsheet(folder, data) {
       }
     }
 
-    // Auto Initializer
+    // Auto Initializer & Reload State Restoration
     window.addEventListener('DOMContentLoaded', () => {
       initAuth();
+
+      // 1. Restore Language
       const savedLang = localStorage.getItem('phnom_pom_lang') || 'km';
       applyLanguage(savedLang);
+
+      // 2. Restore Academic Year
+      const savedYear = localStorage.getItem('phnom_pom_academic_year');
+      if (savedYear) {
+        DB.school.academicYear = savedYear;
+        document.querySelectorAll('.active-year-label').forEach(el => el.innerText = savedYear);
+      }
+
+      // 3. Restore Dark Mode
+      const isDark = localStorage.getItem('phnom_pom_dark_mode') === 'true';
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        DB.isDarkMode = true;
+      }
+
+      // 4. Restore User Session & Active Tab Location on Reload (កុំចាកចេញពីទីតាំង & ហាម Logout)
+      const savedSessionStr = localStorage.getItem('phnom_pom_current_user_session');
+      if (savedSessionStr) {
+        try {
+          const savedUser = JSON.parse(savedSessionStr);
+          if (savedUser && (savedUser.role || savedUser.name)) {
+            const savedTab = localStorage.getItem('phnom_pom_active_tab') || 'dashboard';
+            loginAs(savedUser, true);
+            switchTab(savedTab);
+          }
+        } catch (e) {
+          console.error('Session restore error:', e);
+        }
+      }
+
+      // 5. Start Auto Sync Timer
       const savedInterval = localStorage.getItem('phnom_pom_sync_interval') || 60;
       startPeriodicAutoSyncTimer(savedInterval);
     });
